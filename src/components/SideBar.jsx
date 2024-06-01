@@ -3,7 +3,7 @@ import Logo from "../assets/chatgpt.svg";
 import AddBtn from "../assets/add-30.png";
 import Message from "../assets/message.svg";
 import "./sidebar.css";
-
+// sidebar
 const SideBar = () => {
   return (
     <div className="sidebar">
