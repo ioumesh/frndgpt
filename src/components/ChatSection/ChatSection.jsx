@@ -7,11 +7,13 @@ import axios from "axios";
 
 const ChatSection = () => {
   const mgsEnd = useRef(null);
+
   const intialValue = {
     role: "assistant",
     content:
       "Hi,I'm FrndGPT, an AI language model created by Umesh. I'm here to assist with answering questions, providing information, and engaging in conversations. How can I help you today?",
   };
+
   const [inputValue, setInputValue] = useState("");
   const [messages, setMessages] = useState([intialValue]);
   const handleInput = (e) => {
