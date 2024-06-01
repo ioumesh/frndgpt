@@ -1,10 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
-
+import SideBar from "./components/SideBar";
+// sk-proj-gSioEmk1J9fVyRxunKkZT3BlbkFJYFCRbODCmhsGvlLGr9Xc
 function App() {
   return (
     <div className="App">
-      <h2>Frnd Bot</h2>
+      <div className="sidebar">
+        <SideBar />
+      </div>
+      <div className="main"></div>
     </div>
   );
 }
