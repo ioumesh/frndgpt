@@ -25,7 +25,7 @@ const ChatSection = () => {
 
     try {
       const url = "https://api.openai.com/v1/chat/completions";
-      const apiKey = process.env.OPEN_API_KEY;
+      const apiKey = process.env.REACT_APP_API_KEY;
       const response = await axios.post(
         url,
         {
