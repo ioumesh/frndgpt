@@ -24,8 +24,10 @@ const ChatSection = () => {
     setMessages([...messages, newMessage]);
 
     try {
+      const url = "https://api.openai.com/v1/chat/completions";
+      const apiKey = process.env.OPEN_API_KEY;
       const response = await axios.post(
-        "https://api.openai.com/v1/chat/completions",
+        url,
         {
           model: "gpt-3.5-turbo",
           messages: [...messages, newMessage],
@@ -33,7 +35,7 @@ const ChatSection = () => {
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer sk-proj-UfXEZu5HGW0TA4rrszZIT3BlbkFJkZ4x4lISvdBrCM1SDXBR`,
+            Authorization: `Bearer ${apiKey}`,
           },
         }
       );
@@ -62,19 +64,17 @@ const ChatSection = () => {
       <div className="chats">
         {messages.map((item, index) => {
           return (
-            <>
-              <div
-                key={index}
-                className={item.role === "assistant" ? "chat bot" : "chat"}
-              >
-                <img
-                  src={item.role === "assistant" ? GPTIcon : UserIcon}
-                  alt="chat"
-                  className="chatImg"
-                />
-                <p className="text">{item.content}</p>
-              </div>
-            </>
+            <div
+              key={`chat-${index}`}
+              className={item.role === "assistant" ? "chat bot" : "chat"}
+            >
+              <img
+                src={item.role === "assistant" ? GPTIcon : UserIcon}
+                alt="chat"
+                className="chatImg"
+              />
+              <p className="text">{item.content}</p>
+            </div>
           );
         })}
         <div ref={mgsEnd} />
