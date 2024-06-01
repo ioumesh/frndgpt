@@ -7,7 +7,7 @@ import axios from "axios";
 
 const ChatSection = () => {
   const mgsEnd = useRef(null);
-
+  //intial state value
   const intialValue = {
     role: "assistant",
     content:
