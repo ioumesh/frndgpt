@@ -1,9 +1,9 @@
 import React from "react";
-import Logo from "../assets/chatgpt.svg";
-import AddBtn from "../assets/add-30.png";
-import Message from "../assets/message.svg";
+import Logo from "../../assets/chatgpt.svg";
+import AddBtn from "../../assets/add-30.png";
+import Message from "../../assets/message.svg";
 import "./sidebar.css";
-// sidebarcomp
+
 const SideBar = () => {
   return (
     <div className="sidebar">
@@ -14,7 +14,7 @@ const SideBar = () => {
         </div>
         <div className="upperSideBottom">
           <button className="midBtn">
-            <img src={AddBtn} className="addBtn" />
+            <img src={AddBtn} className="addBtn" alt="addbtn" />
             New Chat
           </button>
           <button className="query">
@@ -23,7 +23,7 @@ const SideBar = () => {
           </button>
           <button className="query">
             <img src={Message} alt="message" />
-            What is Programming ?
+            How to use API ?
           </button>
         </div>
       </div>

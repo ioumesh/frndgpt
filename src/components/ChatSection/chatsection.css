@@ -1,0 +1,82 @@
+.chats {
+  overflow: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 70rem;
+  height: calc(100vh - 17rem);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(28, 30, 58, 1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.chat {
+  margin: 1rem;
+  padding: 2rem 3rem;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  text-align: justify;
+}
+.bot {
+  background: rgba(28, 30, 58, 1);
+  width: fit-content;
+  border-radius: 0.5rem;
+}
+.chatImg {
+  object-fit: cover;
+  width: 3.5rem;
+  margin-right: 2rem;
+  border-radius: 0.5rem;
+}
+.chatFooter {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.chatFooter > p {
+  font-size: 1.25rem;
+  margin: 2rem 0;
+  color: rgba(222, 222, 222, 1);
+}
+.inputBox {
+  padding: 0.5rem;
+  background: rgba(28, 30, 58, 1);
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  width: 65rem;
+}
+.inputBox > input {
+  width: calc(100% - 3rem);
+  outline: none;
+  padding: 1.25rem;
+  color: #fff;
+}
+.inputBox > input,
+.sendBtn {
+  border: none;
+  background: transparent;
+}
+
+.text {
+  line-height: 2.4rem;
+  color: rgba(222, 222, 222, 1);
+}
