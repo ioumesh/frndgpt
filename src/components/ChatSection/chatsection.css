@@ -80,3 +80,35 @@
   line-height: 2.4rem;
   color: rgba(222, 222, 222, 1);
 }
+
+@media only screen and (max-width: 768px) {
+  .chats {
+    height: calc(100vh - 50rem);
+    max-width: 100%;
+  }
+
+  .chat {
+    margin: 1rem 0.5rem;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .chatImg {
+    width: 2.5rem;
+    margin-right: 1rem;
+  }
+
+  .inputBox {
+    width: calc(100% - 2rem);
+  }
+
+  .inputBox > input {
+    padding: 1rem;
+  }
+
+  .chatFooter > p {
+    text-align: center;
+    font-size: 1rem;
+    margin: 2rem 0;
+  }
+}

@@ -33,6 +33,28 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 6rem 10rem  ;
+  margin: 6rem 10rem;
   margin-bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 50%; 
+  }
+
+  .App {
+    flex-direction: column; 
+  }
+
+  .sidebar {
+    flex: 1;
+    border-right: none;
+    border-bottom: 1px solid rgb(100, 100, 100); 
+  }
+
+  .main {
+    flex: 1;
+    margin: 2rem 2rem; 
+    min-height: auto; 
+  }
 }

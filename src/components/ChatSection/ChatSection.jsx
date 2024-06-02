@@ -98,7 +98,7 @@ const ChatSection = () => {
         </div>
         <p>
           FrndGPT may produced inaccurate information about people, places or
-          facts. FrndGPT version 1.0
+          facts. FrndGPT version 1.0 Made by Umesh!
         </p>
       </div>
     </>
