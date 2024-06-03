@@ -15,7 +15,7 @@ body {
 }
 
 .App {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
 }
 
@@ -29,6 +29,7 @@ body {
 }
 
 .main {
+  display: none;
   min-height: calc(100vh - 14rem);
   display: flex;
   align-items: center;

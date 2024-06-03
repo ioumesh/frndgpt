@@ -58,7 +58,7 @@ const SideBar = ({ login, logout, user, isLogin }) => {
           </button>
           {user?.email &&
             chats?.docs.map((chat) => {
-              return <ChatRow key={chat.id} id={chat.id} user={user} />;
+              return <ChatRow key={chat.id} id={chat.id} user={user} />
             })}
         </div>
       </div>

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useGoogleLogin } from "@react-oauth/google";
 import ChatSection from "../components/ChatSection/ChatSection";
 import SideBar from "../components/Sidebar/SideBar";
@@ -9,6 +9,15 @@ const HomePage = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState();
   const [isLogin, setIsLogin] = useState(true);
+
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    if (storedUser) {
+      setUser(storedUser);
+      setIsLogin(false);
+    }
+  }, []);
+
   const login = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       try {
@@ -22,6 +31,7 @@ const HomePage = () => {
         );
         if (res.data) {
           setUser(res.data);
+          localStorage.setItem("user", JSON.stringify(res.data));
           setIsLogin(false);
         }
       } catch (error) {
@@ -29,8 +39,11 @@ const HomePage = () => {
       }
     },
   });
+
   const logout = () => {
-    setUser({});
+    setUser(null);
+    localStorage.removeItem("user");
+    localStorage.removeItem("messages");
     setIsLogin(true);
     navigate("/");
   };
