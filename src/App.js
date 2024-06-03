@@ -1,16 +1,16 @@
 import "./App.css";
-import ChatSection from "./components/ChatSection/ChatSection";
-import SideBar from "./components/Sidebar/SideBar";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <div className="sidebar">
-        <SideBar />
-      </div>
-      <div className="main">
-        <ChatSection />
-      </div>
+      <Router>
+        <Routes>
+          <Route path="/" exact element={<HomePage />}></Route>
+          <Route path="/chat/:id" element={<HomePage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
