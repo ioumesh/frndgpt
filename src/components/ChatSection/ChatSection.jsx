@@ -5,7 +5,6 @@ import UserIcon from "../../assets/user-icon.png";
 import GPTIcon from "../../assets/chatgptLogo.svg";
 import axios from "axios";
 
-
 const ChatSection = ({ user }) => {
   const mgsEnd = useRef(null);
 
@@ -45,9 +44,6 @@ const ChatSection = ({ user }) => {
 
       const botMessage = response.data.choices[0].message;
       setMessages([...messages, newMessage, botMessage]);
-      if (user.email) {
-        sendToDataBase();
-      }
     } catch (error) {
       console.error("Error fetching response:", error);
     }
